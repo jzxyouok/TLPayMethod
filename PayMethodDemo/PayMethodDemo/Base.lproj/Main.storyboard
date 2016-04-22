@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="am2-Wb-2K0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--移动支付-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lI-Yd-Ti6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.3294117647" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="o61-zG-blr"/>
+                                </constraints>
+                                <state key="normal" title="调用支付宝支付">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="o61-zG-blr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="o61-zG-blr"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="actionAlipaySubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OEW-vJ-xtL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-5l-Lfg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.3294117647" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="调用微信支付">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionWechatSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z61-BX-MrY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3lI-Yd-Ti6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="3fe-FT-EIY"/>
+                            <constraint firstItem="Xnu-5l-Lfg" firstAttribute="centerX" secondItem="3lI-Yd-Ti6" secondAttribute="centerX" id="Ayr-ym-R5g"/>
+                            <constraint firstItem="Xnu-5l-Lfg" firstAttribute="width" secondItem="3lI-Yd-Ti6" secondAttribute="width" id="DWm-mr-bnv"/>
+                            <constraint firstItem="3lI-Yd-Ti6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="LeB-ab-cvq"/>
+                            <constraint firstItem="Xnu-5l-Lfg" firstAttribute="top" secondItem="3lI-Yd-Ti6" secondAttribute="bottom" constant="10" id="MCj-ZR-Ulc"/>
+                            <constraint firstItem="Xnu-5l-Lfg" firstAttribute="height" secondItem="3lI-Yd-Ti6" secondAttribute="height" id="R1V-AP-iQ5"/>
+                            <constraint firstAttribute="trailing" secondItem="3lI-Yd-Ti6" secondAttribute="trailing" constant="10" id="rHa-JV-MHp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3lI-Yd-Ti6"/>
+                                <exclude reference="Xnu-5l-Lfg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3fe-FT-EIY"/>
+                                <exclude reference="LeB-ab-cvq"/>
+                                <exclude reference="rHa-JV-MHp"/>
+                                <exclude reference="Ayr-ym-R5g"/>
+                                <exclude reference="DWm-mr-bnv"/>
+                                <exclude reference="MCj-ZR-Ulc"/>
+                                <exclude reference="R1V-AP-iQ5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3lI-Yd-Ti6"/>
+                                <include reference="Xnu-5l-Lfg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3fe-FT-EIY"/>
+                                <include reference="LeB-ab-cvq"/>
+                                <include reference="rHa-JV-MHp"/>
+                                <include reference="Ayr-ym-R5g"/>
+                                <include reference="DWm-mr-bnv"/>
+                                <include reference="MCj-ZR-Ulc"/>
+                                <include reference="R1V-AP-iQ5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="移动支付" id="Wml-9r-1ky"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515" y="354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q5o-Cb-Q9l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="am2-Wb-2K0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vGr-Jf-akn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n7Q-Vs-f5i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6s-hr-C3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="354"/>
+        </scene>
+    </scenes>
+</document>
